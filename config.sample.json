@@ -1,0 +1,14 @@
+{
+  "broker": {
+    "host": "localhost",
+    "username": "XXXXXXXX",
+    "password": "XXXXXXXX"
+  },
+  "sources": [
+    {
+      "host": "XXX.XXX.XXX.XXX",
+      "interval": 500,
+      "prefix": "tv"
+    }
+  ]
+}
