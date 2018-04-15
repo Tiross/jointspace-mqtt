@@ -6,10 +6,7 @@
   },
   "sources": [
     {
-      "host": "XXX.XXX.XXX.XXX",
-      "interval": 500,
-      "timeout": 500,
-      "prefix": "tv"
+      "host": "XXX.XXX.XXX.XXX"
     }
   ]
 }
