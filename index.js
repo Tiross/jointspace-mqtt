@@ -5,6 +5,7 @@
 const loop = require('./lib/loop');
 const mqtt = require('./lib/mqtt');
 const config = require('./config.json');
+const output = require('./lib/output');
 
 config.verbose = config.verbose || false;
 
@@ -20,10 +21,7 @@ mqtt.connect(config.broker);
 
 config.sources.forEach((source, index) => {
   if (!source || typeof(source.host) === 'undefined' || !source.host) {
-    if (config.verbose) {
-      console.error('Missing required argument "host"');
-    }
-
+    output.error('Missing required argument "host"');
     process.exit(1);
   }
 
@@ -38,9 +36,7 @@ config.sources.forEach((source, index) => {
     source: '',
   };
 
-  if (config.verbose) {
-    console.log('Polling source "%s" every %dms', source.host, source.interval);
-  }
+  output.log('Polling source "%s" every %dms', source.host, source.interval);
 
   loop(source);
 });
