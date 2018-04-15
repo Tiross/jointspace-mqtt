@@ -43,5 +43,9 @@ config.sources.forEach((source, index) => {
 
   output.log('Polling source "%s" every %dms', source.host, source.interval);
 
+  if (process.ppid) {
+    process.send('ready');
+  }
+
   loop(source);
 });
