@@ -17,6 +17,8 @@ if (undefined === config.sources || !config.sources.length) {
   process.exit(1);
 }
 
+config.broker.qos = config.broker.qos || 0;
+
 mqtt.connect(config.broker);
 
 config.sources.forEach((source, index) => {
