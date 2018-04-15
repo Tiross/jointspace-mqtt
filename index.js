@@ -29,6 +29,7 @@ config.sources.forEach((source, index) => {
 
   source.id = index;
   source.interval = source.interval || 1000;
+  source.timeout = source.timeout || 1000;
   source.prefix = source.prefix || 'tv';
   source.data = {
     status: false,
