@@ -29,6 +29,9 @@ config.sources.forEach((source, index) => {
   source.interval = source.interval || 1000;
   source.timeout = source.timeout || 1000;
   source.prefix = source.prefix || 'tv';
+  source.apiVersion = source.apiVersion || 1;
+  source.port = source.port || 1925;
+  source.netflixPort = source.netflixPort || 0;
   source.data = {
     status: false,
     volume: 0,
