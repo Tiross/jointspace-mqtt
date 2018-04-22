@@ -40,6 +40,7 @@ config.sources.forEach((source, index) => {
     muted: null,
     source: '',
   };
+  source.sources = source.sources || {};
 
   output.log('Polling source "%s" every %dms', source.host, source.interval);
 
