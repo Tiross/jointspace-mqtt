@@ -41,6 +41,7 @@ config.sources.forEach((source, index) => {
     source: '',
   };
   source.sources = source.sources || {};
+  source.sources.checked = false;
 
   output.log('Polling source "%s" every %dms', source.host, source.interval);
 
