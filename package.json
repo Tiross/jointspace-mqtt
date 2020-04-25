@@ -16,9 +16,9 @@
     "jointspace-mqtt": "./index.js"
   },
   "dependencies": {
-    "mqtt": "^2.17.0",
-    "request": "^2.85.0",
-    "request-promise-native": "^1.0.5",
-    "sprintf-js": "^1.1.1"
+    "mqtt": "^2.18.8",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8",
+    "sprintf-js": "^1.1.2"
   }
 }
